@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+    <head>
+        #parse("/layout/head.vm")
+        <link rel="stylesheet" href="#springUrl('')/static/css/bootstrap.min.css" type="text/css"/>
+##        <script type="text/javascript" src="js/jquery.min.js"></script>
+##        <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+        <script type="text/javascript" src="#springUrl('')/static/js/bootstrap.min.js"></script>
+
+        <!-- Include the plugin's CSS and JS: -->
+        <link rel="stylesheet" href="#springUrl('')/static/css/bootstrap-multiselect.css" type="text/css"/>
+        <script type="text/javascript" src="#springUrl('')/static/js/bootstrap-multiselect.js"></script>
+
+		<script language="javascript">
+			$(function() {
+
+				$("#btn-query").click(function() {
+        			pageSubmit(1);
+   				});
+				$("#btn-add").click(function() {
+        			window.location.href=("$basePath/logicZone/addForward");
+   				});
+
+			});
+        	// Submit Search Form
+        	function pageSubmit(pageNoParam) {
+                $("#curPage").val(pageNoParam);
+            	$("#queryForm").attr("action", "$basePath/logicZone/queryByPage");
+                $("#queryForm").attr("method", "POST");
+                $("#queryForm").submit();
+        	}
+        	
+        	function toUpdate(parameterId){
+        		window.location.href=("$basePath/logicZone/updateForward?id="+parameterId);
+        	}
+        	
+        	function toDelete(parameterId){
+        		MyPopWindow.ExecuteDelete("$basePath/logicZone/delete",{ id : parameterId });
+        	}
+        	
+        </script>
+
+
+	</head>
+    <body>
+        <div class="row">
+            <div class="col-xs-12 col-sm-12">
+                <div class="widget-box">
+                    <div class="widget-header">
+                        <h5 class="lighter">
+                            <i class="icon-search green"></i>#springMessage('qualityTools.logicZone')#springMessage('view.lable.search')
+                        </h5>
+                        <div class="widget-toolbar">
+                            <a href="#" data-action="collapse">
+                                <i class="1 icon-chevron-up bigger-100"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="widget-body">
+                        <div class="widget-main" style="background-color: #f5f5f5;padding:5px;">
+                            <form class="form-horizontal" role="form" id="queryForm">
+								<div class="form-group">
+									<label class="col-sm-1 control-label no-padding-right" for="warehouseNo">#springMessage('qualityTools.logicZone.warehouseNo')</label>
+                                    <div class="col-sm-3">
+                                        <input type="text" name="warehouseNo" id="warehouseNo" class="col-xs-10 col-sm-8" value="$!query.warehouseNo"/>
+                                    </div>
+									<label class="col-sm-1 control-label no-padding-right" for="logicNo">#springMessage('qualityTools.logicZone.logicNo')</label>
+                                    <div class="col-sm-3">
+                                        <select id="example-getting-started" multiple="multiple" class="col-xs-12 col-sm-12" >
+                                            <option value="cheese">Cheese</option>
+                                            <option value="tomatoes">Tomatoes</option>
+                                            <option value="mozarella">Mozzarella</option>
+                                            <option value="mushrooms">Mushrooms</option>
+                                            <option value="pepperoni">Pepperoni</option>
+                                            <option value="onions">Onions</option>
+                                        </select>
+##                                        <input type="text" name="logicNo" id="logicNo" class="col-xs-10 col-sm-8" value="$!query.logicNo"/>
+                                    </div>
+									<label class="col-sm-1 control-label no-padding-right" for="zoneNo">#springMessage('qualityTools.logicZone.zoneNo')</label>
+                                    <div class="col-sm-3">
+                                        <select id="productType" name="productType" class="chosen-select " >
+                                            <option value="cheese">Cheese</option>
+                                            <option value="tomatoes">Tomatoes</option>
+                                            <option value="mozarella">Mozzarella</option>
+                                            <option value="mushrooms">Mushrooms</option>
+                                            <option value="pepperoni">Pepperoni</option>
+                                            <option value="onions">Onions</option>
+                                        </select>
+
+##                                        <input type="text" name="zoneNo" id="zoneNo" class="col-xs-10 col-sm-8" value="$!query.zoneNo"/>
+                                    </div>
+								</div>
+								<div class="form-group">
+								</div>
+								<div class="form-group">
+									<div class="col-sm-4 col-sm-offset-8">
+    									#parse("/layout/page.vm")
+                                        <button class="btn btn-info btn-sm" type="button" id="btn-query"><i class="icon-search"></i>#springMessage('view.lable.search')</button>
+                                        &nbsp; &nbsp; &nbsp;
+                                        <button class="btn btn-sm" type="reset" id="btn-reset"><i class="icon-undo"></i>#springMessage('view.lable.reset')</button>
+										 &nbsp; &nbsp; &nbsp;
+              							<button class="btn btn-success btn-sm" type="button" id="btn-add"><i class="icon-plus"></i>#springMessage('view.lable.add')</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+			<div class="col-xs-12 col-sm-12 table-responsive">
+                <table class="table table-striped table-bordered table-condensed table-hover">
+                    <thead>
+                        <tr>
+							<th class="center">#springMessage('qualityTools.logicZone.id')</th>
+							<th class="center">#springMessage('qualityTools.logicZone.warehouseNo')</th>
+							<th class="center">#springMessage('qualityTools.logicZone.logicNo')</th>
+							<th class="center">#springMessage('qualityTools.logicZone.zoneNo')</th>
+							<th class="center">#springMessage('qualityTools.logicZone.createTime')</th>
+							<th class="center">#springMessage('qualityTools.logicZone.createUser')</th>
+    						<th class="center">#springMessage('view.lable.operate')</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        #foreach( $item in $dataList)
+                            <tr>
+                                <td>$!item.id</td>
+                                <td>$!item.warehouseNo</td>
+                                <td>$!item.logicNo</td>
+                                <td>$!item.zoneNo</td>
+                                <td>$!dateTool.format('yyyy-MM-dd HH:mm:ss ',$!item.createTime)</td>
+                                <td>$!item.createUser</td>
+                                <td>
+									<a href="javascript:void(0)" onclick="toDetail($!item.id);" data-toggle="modal"><i class="icon-list">#springMessage('view.lable.detail')</i></a>
+									<a href="javascript:void(0)" onclick="toUpdate($!item.id)"><i class="icon-pencil pink">#springMessage('view.lable.update')</i></a>
+									<a href="javascript:void(0)" onclick="toDelete($!item.id)"><i class="icon-remove red">#springMessage('view.lable.delete')</i></a>
+								</td>
+                            </tr>
+                        #end
+                    </tbody>
+                </table>
+				#if($!page)
+					#pageBarPost($page.totalRow $page.curPage $page.totalPage)
+				#end
+			</div>
+        </div>
+		#parse("/logicZone/detailModal.vm")
+
+        <table id="table_id" border="1">
+            <tr>
+                <td type = "select"><select id="select1"><option>op1</option><option>op1</option><option>op1</option></select></td>
+                <td>22</td>
+                <td>33</td>
+            </tr>
+            <tr>
+                <td><select id="select1"><option>op4</option><option>op5</option><option>op6</option></select></td>
+                <td>55</td>
+                <td>66</td>
+            </tr>
+            <tr>
+                <td><select id="select1"><option>op7</option><option>op8</option><option>op9</option></select></td>
+                <td>88</td>
+                <td>99</td>
+            </tr>
+
+        </table>
+
+        <input type="button" value="点击" onclick="javascript:TableToJson('table_id')">
+    </body>
+    <script type="text/javascript">
+        $(document).ready(function() { debugger ;
+            $('#example-getting-started').multiselect();
+            <!--下面的方法是为了处理js冲突，导致下拉框不显示的问题-->
+            $('.btn-group').click(function(){
+                $('.btn-group').toggleClass("open");
+            });
+
+        });
+
+        var config = {
+            '.chosen-select' : {width:"100%", search_contains: true, no_results_text:'没有找到'}
+        }
+        for (var selector in config) {
+            $(selector).chosen(config[selector]);
+        }
+
+
+        var keysArr = new Array("key0", "key1","key2");//可以根据表格的列数添加
+        function TableToJson(tableid) { //tableid是你要转化的表的表名，是一个字符串，如"example"
+            var rows = document.getElementById(tableid).rows.length; //获得行数(包括thead)
+            var colums = document.getElementById(tableid).rows[0].cells.length; //获得列数
+            var json = "[";
+            var tdValue;
+            for (var i = 0; i < rows; i++) { //每行
+                json += "{";
+                for (var j = 0; j < colums; j++) {
+                    tdName = keysArr[j]; //Json数据的键
+                    json += "\""; //加上一个双引号
+                    json += tdName;
+                    json += "\"";
+                    json += ":";
+                    tdValue = document.getElementById(tableid).rows[i].cells[j].innerHTML;//Json数据的值
+                    if (j === 1) {//第1列是日期格式，需要按照json要求做如下添加
+                        tdValue = "\/Date(" + tdValue + ")\/";
+                    }
+                    json += "\"";
+                    json += tdValue;
+                    json += "\"";
+                    json += ",";
+                }
+                json = json.substring(0, json.length - 1);
+                json += "}";
+                json += ",";
+            }
+            json = json.substring(0, json.length - 1);
+            json += "]";
+            debugger ;
+            $("#logicNo_id").val(json) ;
+            return json;
+        }
+    </script>
+
+
+    <script src="http://www.w3school.com.cn/jquery/jquery-1.11.1.min.js">
+    </script>
+    <table border="1" id="table_234">
+        <tr>
+            <td type = "select"><B>11111</B></td>
+            <td align="center"><B>2222</B></td>
+            <td align="center"><B>3333</B></td>
+            <td class="result">
+                <select id="grade">
+                    <option value ="1">1</option>
+                    <option value ="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                </select></td>
+            <td><B><input type="button" class="btn"  value="提交"/></B></td>
+         </tr>
+         <tr>
+            <td><input class="datainp" id="dateinfo" type="text" placeholder="请选择"  readonly></td>
+            <td align="center"><input name = "qwqw" type="text" ></td>
+            <td align="center">B:<input name = "1221" type="radio" value="B">&nbsp;C:<input name = "1221" type="radio" value="C"></td>
+            <td class="result">
+                <select id="grade">
+                    <option value ="1">1</option>
+                    <option value ="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                </select></td>
+            <td><B><input type="button" class="btn"  value="提交"/></B></td>
+        </tr>
+        <tr>
+            <td><B>11111</B></td>
+            <td align="center"><B>2222</B></td>
+            <td align="center"><B>3333</B></td>
+            <td class="result">
+                <select id="grade">
+                    <option value ="1">1</option>
+                    <option value ="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                </select></td>
+            <td><B><input  type="button" class="btn"  value="提交"/></B></td>
+        </tr>
+    </table>
+    <input type="button" value="获取" onclick="javascript:getTableSelect()"/>
+
+
+
+    <script type="text/javascript">
+        //jeDate.skin('gray');
+        jeDate({
+            dateCell:"#dateinfo",
+            format:"YYYY-MM-DD hh:mm:ss",
+            isinitVal:true,
+            isTime:true, //isClear:false,
+            minDate:"2014-09-19 00:00:00",
+            okfun:function(val){alert(val)}
+        })
+    </script>
+
+    <script>
+        function getTableSelect(){  debugger ;
+            // 获得td中select的选中的值
+            var bb = $('#table_234 tr:eq(1) td:eq(3) select').val() ;
+            alert(bb);
+            // 获得td中input 类型为radio 选中的值
+            var cc = $("#table_234 tr:eq(1) td:eq(2) input[type='radio']:checked").val() ;
+            alert(cc);
+            // 获得td中input的值
+            var dd = $("#table_234 tr:eq(1) td:eq(1) input").val() ;
+            alert(dd);
+            // 获得td中文本内容
+            var aa = $("#table_234").find("tr").eq(2).find("td").eq(3).text();
+            alert(aa);
+            // 获得td中input的值
+            var ee = $("#table_234 tr:eq(1) td:eq(0) input").val() ;
+            alert(ee);
+            // 获得td属性对应的值
+            var ff = $("#table_234 tr:eq(0) td:eq(0)").attr("type") ;
+            alert(ff);
+        }
+    </script>
+
+
+
+    <style>
+        div.box{width:300px;height:250px;padding:10px 20px;border:4px dashed #ccc;}
+        div.box>span{color:#999;font-style:italic;}
+        div.content{width:250px;height:100px;margin:10px 0;padding:5px 20px;border:2px solid #ff6666;}
+        input[type='text']{width:35px;height:30px;border:1px solid #99ccff;}
+        input[type='button']{width:100px;height:30px;margin:10px;border:2px solid #ebbcbe;}
+        .selected{background:#99ccff;}
+        table{border-collapse:collapse;}
+        td{padding:5px 10px;border:1px solid green;}
+    </style>
+    <div class="box">
+        <span>填写行列数，点击按钮后获取对应位置的数值：</span>
+        <div class="content">
+            <table id="table_123">
+                <tr><td>1</td><td>2</td><td>3</td></tr>
+                <tr><td>4</td><td>5</td><td>6</td></tr>
+                <tr><td>7</td><td>8</td><td>9</td></tr>
+            </table>
+        </div>
+        第<input type="text" name="row">行，第<input type="text" name="col">列<input type="button" class="btn" value="确定">
+    </div>
+    <script>
+//        $(function(){
+//            $("input:button").click(function() {  debugger ;
+//                row = $("input[name='row']").val() - 1;
+//                col = $("input[name='col']").val() - 1;
+//                val = $("#table_123").find("tr").eq(row).find("td").eq(col).text();
+//                alert(val);
+//            });
+//        })
+    </script>
+
+
+
+
+
+    <form id= "uploadForm">
+        <p >指定文件名： <input type="text" name="warehouseNo" value= ""/></p >
+        <p >ffff： <input type="text" name="fffff" value= ""/></p >
+        <p >logicNo： <input type="text" name="logicNo" id="logicNo_id" value= ""/></p >
+        <p >上传文件： <input type="file" name="file" /></ p>
+        <input type="button" value="上传" onclick="doUpload()" />
+    </form>
+
+    <script>
+        function doUpload() {debugger;
+            var formData = new FormData($( "#uploadForm" )[0]);
+                $.ajax({
+                    url: '$basePath/logicZone/upload' ,
+                    type: 'POST',
+                    data: formData,
+                    async: false,
+                    cache: false,
+                    contentType: false,
+                    processData: false,
+                    success: function (returndata) {
+                        alert(returndata);
+                    },
+                    error: function (returndata) {
+                        alert(returndata);
+                    }
+            });
+        }
+    </script>
+</html>

@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="le-qualityTools-webservice:war">
+    <output-path>$PROJECT_DIR$/le-qualityTools-webservice/target</output-path>
+    <root id="archive" name="le-qualityTools-webservice.war">
+      <element id="artifact" artifact-name="le-qualityTools-webservice:war exploded" />
+    </root>
+  </artifact>
+</component>

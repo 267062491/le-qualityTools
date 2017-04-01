@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/le-qualityTools.iml" filepath="$PROJECT_DIR$/le-qualityTools.iml" />
+      <module fileurl="file://$PROJECT_DIR$/le-qualityTools-dao/le-qualityTools-dao.iml" filepath="$PROJECT_DIR$/le-qualityTools-dao/le-qualityTools-dao.iml" />
+      <module fileurl="file://$PROJECT_DIR$/le-qualityTools-domain/le-qualityTools-domain.iml" filepath="$PROJECT_DIR$/le-qualityTools-domain/le-qualityTools-domain.iml" />
+      <module fileurl="file://$PROJECT_DIR$/le-qualityTools-manager/le-qualityTools-manager.iml" filepath="$PROJECT_DIR$/le-qualityTools-manager/le-qualityTools-manager.iml" />
+      <module fileurl="file://$PROJECT_DIR$/le-qualityTools-proxy/le-qualityTools-proxy.iml" filepath="$PROJECT_DIR$/le-qualityTools-proxy/le-qualityTools-proxy.iml" />
+      <module fileurl="file://$PROJECT_DIR$/le-qualityTools-service/le-qualityTools-service.iml" filepath="$PROJECT_DIR$/le-qualityTools-service/le-qualityTools-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/le-qualityTools-util/le-qualityTools-util.iml" filepath="$PROJECT_DIR$/le-qualityTools-util/le-qualityTools-util.iml" />
+      <module fileurl="file://$PROJECT_DIR$/le-qualityTools-web/le-qualityTools-web.iml" filepath="$PROJECT_DIR$/le-qualityTools-web/le-qualityTools-web.iml" />
+      <module fileurl="file://$PROJECT_DIR$/le-qualityTools-webservice/le-qualityTools-webservice.iml" filepath="$PROJECT_DIR$/le-qualityTools-webservice/le-qualityTools-webservice.iml" />
+      <module fileurl="file://$PROJECT_DIR$/le-qualityTools-worker/le-qualityTools-worker.iml" filepath="$PROJECT_DIR$/le-qualityTools-worker/le-qualityTools-worker.iml" />
+    </modules>
+  </component>
+</project>
+
