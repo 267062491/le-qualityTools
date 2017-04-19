@@ -1,5 +1,7 @@
 package com.letv.qualityTools.utils.study.reflect;
 
+import org.springframework.stereotype.Service;
+
 /**
  * Created with IntelliJ IDEA.
  * User: yuguodong
@@ -7,8 +9,10 @@ package com.letv.qualityTools.utils.study.reflect;
  * Time: 下午4:26
  * To change this template use File | Settings | File Templates.
  */
-public class TestReflectEntity {
+@Service
+public class TestReflectEntity extends TestReflectEntitySuper implements  TestReflectEntityInterface{
 
+    @Deprecated
     public TestReflectEntity(){
         System.out.println("我是没有参数的构造函数");
     }
@@ -27,12 +31,28 @@ public class TestReflectEntity {
 
     private Integer code ;
     private String content ;
+    public String extend1 ;
 
     public String methodOne(){
         String content = "我是methodOne" ;
         System.out.print(content);
         return  content;
     }
+    public String methodTwo(String par){
+        String content = "我是methodTwo："+par ;
+        System.out.print(content);
+        return  content;
+    }
+
+
+    /**
+     * 内部类
+     */
+    public class InClass{
+
+    }
+
+
 
     public Integer getCode() {
         return code;
@@ -48,5 +68,13 @@ public class TestReflectEntity {
 
     public void setContent(String content) {
         this.content = content;
+    }
+
+    public String getExtend1() {
+        return extend1;
+    }
+
+    public void setExtend1(String extend1) {
+        this.extend1 = extend1;
     }
 }

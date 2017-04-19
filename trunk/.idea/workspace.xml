@@ -9,7 +9,7 @@
     <file path="$PROJECT_DIR$/le-qualityTools-dao/src/main/resources/spring/spring-config-datasource.xml" changelist="3799a496-0b2d-4eeb-8f30-898005c5661a" time="1486903605579" ignored="false" />
     <file path="$PROJECT_DIR$/le-qualityTools-dao/src/main/resources/spring/spring-config-dao.xml" changelist="3799a496-0b2d-4eeb-8f30-898005c5661a" time="1486903605579" ignored="false" />
     <file path="/pom.xml" changelist="3799a496-0b2d-4eeb-8f30-898005c5661a" time="1489993536921" ignored="false" />
-    <file path="/*.regexp" changelist="3799a496-0b2d-4eeb-8f30-898005c5661a" time="1491018431121" ignored="false" />
+    <file path="/*.regexp" changelist="3799a496-0b2d-4eeb-8f30-898005c5661a" time="1492570871814" ignored="false" />
     <file path="$PROJECT_DIR$/le-qualityTools-web/src/test/java/com/letv/test/qualityTools/service/LogicZoneServiceTestCase.java" changelist="3799a496-0b2d-4eeb-8f30-898005c5661a" time="1486904182962" ignored="false" />
     <file path="$PROJECT_DIR$/le-qualityTools-web/src/test/java/com/letv/test/base/TestConstants.java" changelist="3799a496-0b2d-4eeb-8f30-898005c5661a" time="1486904182962" ignored="false" />
     <file path="$PROJECT_DIR$/le-qualityTools-web/src/test/java/com/letv/test/base/BaseTransactionTestCase.java" changelist="3799a496-0b2d-4eeb-8f30-898005c5661a" time="1486904182962" ignored="false" />
@@ -89,8 +89,10 @@
     <file path="$PROJECT_DIR$/../../review/review/le-tbtSps/trunk/le-tbtSps-service/src/main/java/com/letv/tbtSps/service/test/Person.java" changelist="3799a496-0b2d-4eeb-8f30-898005c5661a" time="1489994346843" ignored="false" />
     <file path="/LogicZoneController.java" changelist="3799a496-0b2d-4eeb-8f30-898005c5661a" time="1491016495403" ignored="false" />
     <file path="/JsonHelperImpl.java" changelist="3799a496-0b2d-4eeb-8f30-898005c5661a" time="1491016704812" ignored="false" />
-    <file path="/TestReflectEntity.java" changelist="3799a496-0b2d-4eeb-8f30-898005c5661a" time="1492510865837" ignored="false" />
-    <file path="/RunMethod.java" changelist="3799a496-0b2d-4eeb-8f30-898005c5661a" time="1492511330633" ignored="false" />
+    <file path="/TestReflectEntity.java" changelist="3799a496-0b2d-4eeb-8f30-898005c5661a" time="1492592671303" ignored="false" />
+    <file path="/RunMethod.java" changelist="3799a496-0b2d-4eeb-8f30-898005c5661a" time="1492593268535" ignored="false" />
+    <file path="/TestReflectEntityInterface.java" changelist="3799a496-0b2d-4eeb-8f30-898005c5661a" time="1492592628288" ignored="false" />
+    <file path="/TestReflectEntitySuper.java" changelist="3799a496-0b2d-4eeb-8f30-898005c5661a" time="1492592847642" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -322,6 +324,21 @@
         <option name="CONDITION" value="" />
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
+      <breakpoint url="file://$PROJECT_DIR$/le-qualityTools-util/src/main/java/com/letv/qualityTools/utils/study/reflect/RunMethod.java" line="241" class="com.letv.qualityTools.utils.study.reflect.RunMethod" package="com.letv.qualityTools.utils.study.reflect">
+        <option name="ENABLED" value="true" />
+        <option name="LOG_ENABLED" value="false" />
+        <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="REMOVE_AFTER_HIT" value="false" />
+        <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="SUSPEND" value="true" />
+        <option name="COUNT_FILTER_ENABLED" value="false" />
+        <option name="COUNT_FILTER" value="0" />
+        <option name="CONDITION_ENABLED" value="true" />
+        <option name="CLASS_FILTERS_ENABLED" value="false" />
+        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
+        <option name="CONDITION" value="" />
+        <option name="LOG_MESSAGE" value="" />
+      </breakpoint>
     </line_breakpoints>
     <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <breakpoint_rules />
@@ -336,7 +353,25 @@
       <file leaf-file-name="TestReflectEntity.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/le-qualityTools-util/src/main/java/com/letv/qualityTools/utils/study/reflect/TestReflectEntity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="26" column="61" selection-start="746" selection-end="746" vertical-scroll-proportion="0.0">
+            <state line="33" column="29" selection-start="972" selection-end="972" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TestReflectEntitySuper.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/le-qualityTools-util/src/main/java/com/letv/qualityTools/utils/study/reflect/TestReflectEntitySuper.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="11" column="10" selection-start="257" selection-end="257" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TestReflectEntityInterface.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/le-qualityTools-util/src/main/java/com/letv/qualityTools/utils/study/reflect/TestReflectEntityInterface.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="11" column="41" selection-start="292" selection-end="292" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -345,7 +380,7 @@
       <file leaf-file-name="RunMethod.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/le-qualityTools-util/src/main/java/com/letv/qualityTools/utils/study/reflect/RunMethod.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="114" column="4" selection-start="4876" selection-end="4876" vertical-scroll-proportion="0.7473684">
+            <state line="236" column="38" selection-start="9569" selection-end="9569" vertical-scroll-proportion="0.5263158">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -353,73 +388,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="InstantiationException.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="jar://D:/Program Files (x86)/Java/jdk1.7.0_79/src.zip!/java/lang/InstantiationException.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="45" column="19" selection-start="816" selection-end="829" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Constructor.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="jar://D:/Program Files (x86)/Java/jdk1.7.0_79/src.zip!/java/lang/reflect/Constructor.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="509" column="13" selection-start="20533" selection-end="20533" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="JsonHelperImpl.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/le-qualityTools-util/src/main/java/com/letv/qualityTools/utils/constant/JsonHelperImpl.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="16" column="13" selection-start="381" selection-end="381" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AccessibleObject.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="jar://D:/Program Files (x86)/Java/jdk1.7.0_79/src.zip!/java/lang/reflect/AccessibleObject.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="56" column="13" selection-start="1351" selection-end="1351" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="Class.java" pinned="false" current="false" current-in-tab="false">
         <entry file="jar://D:/Program Files (x86)/Java/jdk1.7.0_79/src.zip!/java/lang/Class.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="2051" column="22" selection-start="87678" selection-end="87689" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Member.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="jar://D:/Program Files (x86)/Java/jdk1.7.0_79/src.zip!/java/lang/reflect/Member.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="39" column="10" selection-start="503" selection-end="503" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="GenericDeclaration.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="jar://D:/Program Files (x86)/Java/jdk1.7.0_79/src.zip!/java/lang/reflect/GenericDeclaration.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="34" column="119" selection-start="444" selection-end="444" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ClassNotFoundException.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="jar://D:/Program Files (x86)/Java/jdk1.7.0_79/src.zip!/java/lang/ClassNotFoundException.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="52" column="52" selection-start="1406" selection-end="1406" vertical-scroll-proportion="0.0">
+            <state line="1805" column="16" selection-start="76491" selection-end="76496" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -435,8 +407,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/le-qualityTools-webservice/src/main/java/com/letv/qualityTools/rest/YellowBicycleResource.java" />
-        <option value="$PROJECT_DIR$/le-qualityTools-service/pom.xml" />
         <option value="$PROJECT_DIR$/le-qualityTools-domain/src/main/java/com/letv/qualityTools/domain/Person.java" />
         <option value="$PROJECT_DIR$/le-qualityTools-service/src/main/java/com/letv/qualityTools/service/impl/SolrDao.java" />
         <option value="$PROJECT_DIR$/le-qualityTools-service/src/main/java/com/letv/qualityTools/service/impl/SolrJTest.java" />
@@ -448,8 +418,10 @@
         <option value="$PROJECT_DIR$/le-qualityTools-web/src/main/java/com/letv/qualityTools/controller/LogicZoneController.java" />
         <option value="$PROJECT_DIR$/le-qualityTools-util/src/main/java/com/letv/qualityTools/utils/study/reflect/entity/TestReflectEntity.java" />
         <option value="$PROJECT_DIR$/le-qualityTools-util/src/main/java/com/letv/qualityTools/utils/TestReflectEntity.java" />
-        <option value="$PROJECT_DIR$/le-qualityTools-util/src/main/java/com/letv/qualityTools/utils/study/reflect/TestReflectEntity.java" />
         <option value="$PROJECT_DIR$/le-qualityTools-util/src/main/java/com/letv/qualityTools/utils/constant/JsonHelperImpl.java" />
+        <option value="$PROJECT_DIR$/le-qualityTools-util/src/main/java/com/letv/qualityTools/utils/study/reflect/TestReflectEntityInterface.java" />
+        <option value="$PROJECT_DIR$/le-qualityTools-util/src/main/java/com/letv/qualityTools/utils/study/reflect/TestReflectEntity.java" />
+        <option value="$PROJECT_DIR$/le-qualityTools-util/src/main/java/com/letv/qualityTools/utils/study/reflect/TestReflectEntitySuper.java" />
         <option value="$PROJECT_DIR$/le-qualityTools-util/src/main/java/com/letv/qualityTools/utils/study/reflect/RunMethod.java" />
       </list>
     </option>
@@ -882,7 +854,7 @@
       <recent name="D:\self_workspace\le-qualityTools\trunk\le-qualityTools-dao\src\main\resources\sqlmap\mysql\qualityTools" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.JsonHelperImpl">
+  <component name="RunManager" selected="Application.RunMethod">
     <configuration default="false" name="SolrJTest" type="Application" factoryName="Application" temporary="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
@@ -983,7 +955,13 @@
       <option name="PASS_PARENT_ENVS" value="true" />
       <module name="le-qualityTools-util" />
       <envs />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="" />
+        <option name="TRANSPORT" value="0" />
+        <option name="LOCAL" value="true" />
+      </RunnerSettings>
       <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Debug" />
       <ConfigurationWrapper RunnerId="Run" />
       <method />
     </configuration>
@@ -1197,8 +1175,8 @@
     </list>
     <recent_temporary>
       <list size="4">
-        <item index="0" class="java.lang.String" itemvalue="Application.JsonHelperImpl" />
-        <item index="1" class="java.lang.String" itemvalue="Application.RunMethod" />
+        <item index="0" class="java.lang.String" itemvalue="Application.RunMethod" />
+        <item index="1" class="java.lang.String" itemvalue="Application.JsonHelperImpl" />
         <item index="2" class="java.lang.String" itemvalue="Application.SolrJTest" />
         <item index="3" class="java.lang.String" itemvalue="Application.SolrDao" />
       </list>
@@ -1237,14 +1215,14 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.26927373" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.26815644" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -1258,8 +1236,8 @@
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25506938" sideWeight="0.6715084" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3288364" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2379936" sideWeight="0.68715084" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.31284916" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2379936" sideWeight="0.7318436" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.23240224" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2497332" sideWeight="0.56089383" order="3" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -1332,38 +1310,12 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://D:/Program Files (x86)/Java/jdk1.7.0_79/src.zip!/java/lang/Throwable.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="113" column="13" selection-start="5037" selection-end="5037" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://D:/Program Files (x86)/Java/jdk1.7.0_79/src.zip!/java/lang/Exception.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="44" column="35" selection-start="947" selection-end="947" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://D:/Program Files (x86)/Java/jdk1.7.0_79/src.zip!/java/lang/ReflectiveOperationException.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="34" column="53" selection-start="420" selection-end="420" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://D:/Program Files (x86)/Java/jdk1.7.0_79/src.zip!/java/lang/ClassNotFoundException.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="52" column="52" selection-start="1406" selection-end="1406" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://D:/Program Files (x86)/Java/jdk1.7.0_79/src.zip!/java/lang/Object.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="63" column="41" selection-start="1514" selection-end="1522" vertical-scroll-proportion="-6.314516">
-          <folding />
+          <folding>
+            <element signature="e#0#3571#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1384,14 +1336,20 @@
     <entry file="jar://D:/Program Files (x86)/Java/jdk1.7.0_79/src.zip!/java/lang/reflect/AccessibleObject.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="56" column="13" selection-start="1351" selection-end="1351" vertical-scroll-proportion="0.0">
-          <folding />
+          <folding>
+            <element signature="e#0#10119#0" expanded="false" />
+            <element signature="imports" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="jar://D:/Program Files (x86)/Java/jdk1.7.0_79/src.zip!/java/lang/reflect/Constructor.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="509" column="13" selection-start="20533" selection-end="20533" vertical-scroll-proportion="0.0">
-          <folding />
+          <folding>
+            <element signature="e#0#26974#0" expanded="false" />
+            <element signature="imports" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1405,41 +1363,74 @@
     <entry file="jar://D:/Program Files (x86)/Java/jdk1.7.0_79/src.zip!/java/lang/InstantiationException.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="45" column="19" selection-start="816" selection-end="829" vertical-scroll-proportion="0.0">
-          <folding />
+          <folding>
+            <element signature="e#0#1334#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="jar://D:/Program Files (x86)/Java/jdk1.7.0_79/src.zip!/java/lang/Class.java">
+    <entry file="jar://D:/Program Files (x86)/Java/jdk1.7.0_79/src.zip!/java/lang/reflect/Method.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="2051" column="22" selection-start="87678" selection-end="87689" vertical-scroll-proportion="0.0">
+        <state line="587" column="47" selection-start="24112" selection-end="24112" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="e#0#31440#0" expanded="false" />
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://D:/Program Files (x86)/Java/jdk1.7.0_79/src.zip!/java/lang/Object.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="63" column="33" selection-start="1514" selection-end="1514" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="jar://D:/Program Files (x86)/Java/jdk1.7.0_79/src.zip!/java/lang/reflect/GenericDeclaration.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="34" column="119" selection-start="444" selection-end="444" vertical-scroll-proportion="0.0">
+        <state line="34" column="119" selection-start="444" selection-end="444" vertical-scroll-proportion="0.3421659">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/le-qualityTools-util/src/main/java/com/letv/qualityTools/utils/constant/JsonHelperImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="13" selection-start="381" selection-end="381" vertical-scroll-proportion="0.0">
+        <state line="34" column="23" selection-start="1032" selection-end="1032" vertical-scroll-proportion="0.90207374">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://D:/Program Files (x86)/Java/jdk1.7.0_79/src.zip!/java/lang/Class.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1805" column="16" selection-start="76491" selection-end="76496" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/le-qualityTools-util/src/main/java/com/letv/qualityTools/utils/study/reflect/TestReflectEntity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="61" selection-start="746" selection-end="746" vertical-scroll-proportion="0.0">
+        <state line="33" column="29" selection-start="972" selection-end="972" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/le-qualityTools-util/src/main/java/com/letv/qualityTools/utils/study/reflect/TestReflectEntityInterface.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="41" selection-start="292" selection-end="292" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/le-qualityTools-util/src/main/java/com/letv/qualityTools/utils/study/reflect/TestReflectEntitySuper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="10" selection-start="257" selection-end="257" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/le-qualityTools-util/src/main/java/com/letv/qualityTools/utils/study/reflect/RunMethod.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="114" column="4" selection-start="4876" selection-end="4876" vertical-scroll-proportion="0.7473684">
+        <state line="236" column="38" selection-start="9569" selection-end="9569" vertical-scroll-proportion="0.5263158">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

@@ -1,9 +1,14 @@
 package com.letv.qualityTools.utils.study.reflect;
 
+import com.fasterxml.jackson.databind.util.Annotations;
 import org.apache.poi.ss.formula.functions.T;
+import org.springframework.stereotype.Service;
 
+import java.lang.annotation.Annotation;
 import java.lang.reflect.Constructor;
+import java.lang.reflect.Field;
 import java.lang.reflect.InvocationTargetException;
+import java.lang.reflect.Method;
 
 /**
  * Created with IntelliJ IDEA.
@@ -79,11 +84,14 @@ public class RunMethod {
     }
 
     /**
-     * 构造函数描述 ， 有4中获得构造函数的方法，
+     * 构造函数描述 ， 有4种获得构造函数的方法，
      *  获得所有public
      *  获得所有包括private
      *  按照参数获得public
      *  按照参数获包括private
+     *
+     * 特别注意 ：getDeclaredConstructor 能够获取到当前类中所有的范围的（public private protected）
+     *            getConstructor 能够获取到当前类以及父类、接口的所有的public的
      */
     public void constructorDescribe()  {
         Class clazz = TestReflectEntity.class ;
@@ -113,9 +121,128 @@ public class RunMethod {
         }
     }
 
-    public static void main(String[] args) throws Exception {
+    /**
+     * 方法描述 ， 有4种获得构造函数的方法，
+     *  获得所有public
+     *  获得所有包括private
+     *  按照名称和参数获得public
+     *  按照名称和参数获包括private
+     */
+    public void methodDescribe()  {
+        try {
+            /**
+             * 获取到某个方法并调用该方法的步骤
+             * 1、得到类 TestReflectEntity.class
+             * 2、对类进行实例化  clazz.newInstance()
+             * 3、得到方法     clazz.getDeclaredMethod("methodTwo",String.class)
+             * 4、方法调用， 指定类的实例和参数值   method.invoke(testReflectEntity,"方法2")
+             */
+            Class clazz = TestReflectEntity.class ;
+            TestReflectEntity testReflectEntity = (TestReflectEntity) clazz.newInstance();
+            Method[] methods = clazz.getMethods();  // 所有public 的方法
+            Method[] methodsAll = clazz.getDeclaredMethods();// 所有方法 包括private
+            Method methodAll = clazz.getDeclaredMethod("methodTwo",String.class); // 获得指定名称和参数的方法， 包括private
+            Method method = clazz.getMethod("methodTwo",String.class); // 获得指定名称和参数的public方法
+            method.invoke(testReflectEntity,"方法2");// 执行方法调用， 指定调用哪个类，具体参数值
+        } catch (NoSuchMethodException e) {
+            e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
+        } catch (InvocationTargetException e) {
+            e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
+        } catch (InstantiationException e) {
+            e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
+        } catch (IllegalAccessException e) {
+            e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
+        }
+    }
+    /**
+     * 属性描述 ， 有4种获得构造函数的方法，
+     *  获得所有public
+     *  获得所有包括private
+     *  按照名称和参数获得public
+     *  按照名称和参数获包括private
+     */
+    public void filedDescribe()  {
+        /**
+         * 获取到某个属性并并获取属性值的步骤
+         * 1、得到类 TestReflectEntity.class
+         * 2、对类进行实例化  clazz.newInstance()
+         * 3、得到属性     clazz.getDeclaredField("methodTwo")
+         * 4、方法调用， 执行field的get或者set方法
+         */
+
+        try {
+            /**
+             * 在已有的对象实例的基础上通过反射操作熟悉
+             * 说明，也可以对已有对象实例进行操作
+             */
+            TestReflectEntity testReflectEntity = new TestReflectEntity();
+            testReflectEntity.setCode(1);
+            testReflectEntity.setContent("wer");
+            Class<TestReflectEntity> entityClass = (Class<TestReflectEntity>) testReflectEntity.getClass();
+            Field fieldContent = entityClass.getDeclaredField("content");
+            fieldContent.setAccessible(true);
+            System.out.println(String.valueOf(fieldContent.get(testReflectEntity)));
+
+            /**
+             * 通过反射创建对象，然后操作属性
+             */
+            Class<TestReflectEntity> clazz = TestReflectEntity.class;
+            TestReflectEntity testReflectEntity1 = clazz.newInstance();
+            Field field = clazz.getDeclaredField("content") ;
+            field.setAccessible(true);
+            field.set(testReflectEntity1,"我是set进去的");
+            System.out.println("==" + field.get(testReflectEntity1));
+        } catch (NoSuchFieldException e) {
+            e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
+        } catch (InstantiationException e) {
+            e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
+        } catch (IllegalAccessException e) {
+            e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
+        }
+    }
+
+    /**
+     * class的其他方法
+     */
+    public void otherApi() {
+        Class<TestReflectEntity> clazz =TestReflectEntity.class;
+        /**
+         * 获得类的注解
+         */
+        Annotation[] annotations = clazz.getAnnotations();
+        Annotation annotationService = clazz.getAnnotation(Service.class);
+
+        /**
+         * 获得类的内部类
+         */
+        Class<?>[] inClassAll = clazz.getDeclaredClasses();
+        for(Class c : inClassAll){
+            /**
+             * 获得内部类所在的外部类
+             */
+            Class outClass = c.getDeclaringClass();
+        }
+
+        /**
+         * 获得父类
+         */
+        Class supperClass = clazz.getSuperclass();
+
+        /**
+         * 获得包
+         */
+        Package packag = clazz.getPackage();
 
     }
+
+    public static void main(String[] args) throws Exception {
+        Class clazz = TestReflectEntity.class;
+        Field[] fileds = clazz.getDeclaredFields();
+        Field[] fileds1 = clazz.getFields();
+        System.out.print("11");
+    }
+
+
 
 
 }
